@@ -1,0 +1,403 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+}
+
+body {
+    background-color: rgb(224, 224, 224);
+}
+
+/* ------------------------NAVBAR----------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 25px;
+    background-color: #EF5737;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.logo {
+    margin-bottom: 25px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    height: 35px;
+}
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    height: 50px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+ @media screen and (max-width: 1024px) {
+     .nav-links  {
+         display: flex;
+         justify-content: space-around;
+         width: 50%;
+         color: rgb(255, 255, 255);
+     }
+ }
+
+ @media screen and (max-width: 968px) {
+        body {
+            overflow-x: hidden;
+        }
+      .nav-links {
+         position:absolute;
+         right: 0px;
+         height: 90vh;
+         top: 82px;
+         display: flex;
+         flex-direction: column;
+         align-items:center;
+         background-color: #EF5737;
+         width: 37%;
+         transform: translateX(100%);
+         transition: transform 0.5s ease-in;
+     }
+
+     .nav-links li{
+         opacity: 0%;
+     }
+
+     .burger{
+         display: block;
+     }
+ }
+
+ .nav-active {
+     transform: translateX(0%);
+ }
+
+ @keyframes navLinkFade{
+     from{
+         opacity: 0;
+         transform: translateX(50%);
+     }
+     to{
+         opacity: 1;
+         transform: translateX(0%);
+     }
+ }
+
+ .toggle .Line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+ }
+
+ .toggle .Line2 {
+     opacity: 0;
+}
+
+ .toggle .Line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* -----------------------CARDS------------------------- */
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card1 {
+    background: rgb(255, 255, 255);
+    width: 550px;
+    margin: 15px;
+    border-radius: 16px;
+}
+
+.card-img1 {
+    background-color: rgb(75, 192, 192);
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-img1 {
+    background-image: url('./tulivieja.jpg');
+}
+
+.card2 {
+    background: rgb(255, 255, 255);
+    width: 550px;
+    margin: 15px;
+    border-radius: 16px;
+}
+
+.card-img2 {
+    background-color: rgb(75, 192, 192);
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-img2 {
+    background-image: url('./carnavales.jpg');
+}
+
+.card3 {
+    background: rgb(255, 255, 255);
+    width: 550px;
+    margin: 15px;
+    border-radius: 16px;
+}
+
+.card-img3 {
+    background-color: rgb(75, 192, 192);
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-img3 {
+    background-image: url('./Sancocho.jpg');
+}
+
+.card4 {
+    background: rgb(255, 255, 255);
+    width: 550px;
+    margin: 15px;
+    border-radius: 16px;
+}
+
+.card-img4 {
+    background-color: rgb(75, 192, 192);
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-img4 {
+    background-image: url('./Congo.jpg');
+}
+
+.card5 {
+    background: rgb(255, 255, 255);
+    width: 550px;
+    margin: 15px;
+    border-radius: 16px;
+}
+
+.card-img5 {
+    background-color: rgb(75, 192, 192);
+    height: 170px;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 16px 16px 0 0;
+}
+
+.card-img5 {
+    background-image: url('./Pollera.jpg');
+}
+
+.container h2 {
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.container p {
+    padding: 10px;
+    font-family: sans-serif;
+}
+
+.container a {
+    background-color: rgb(221, 77, 33);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* ------------------------FOOTER----------------------- */
+
+footer{
+    width: 100%;
+    background: #202020;
+    color: white;   
+    font-family: sans-serif;
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1{
+    max-width: 400px;
+}
+
+.colum1 h1{
+    font-size: 22px;
+}
+
+.colum1 p{
+    font-size: 14px;
+    color: #C7C7C7;
+    margin-top: 20px;
+}
+
+.colum2{
+    max-width: 400px;
+    
+}
+
+.colum2 h1{
+    font-size: 22px;
+}
+
+.colum2 a {
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+.row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 36px;
+    height: 36px;
+}
+
+.row1 {
+    margin-top: 20px;
+    display: flex; 
+}
+
+.row1 img{
+    width: 42px;
+    height: 30px;
+}
+
+.row1 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #C7C7C7;
+}
+
+.row label{
+    margin-top: 10px;
+    margin-left: 25px;
+    color: #C7C7C7;
+}
+
+.colum3{
+    max-width: 400px;
+}
+
+.colum3 h1{
+    font-size: 22px;
+}
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 36px;
+    height: 36px;
+}
+
+.row2 label{
+    margin-top: 10px;
+    margin-left: 20px;
+    max-width: 140px;
+}
+
+.container-footer{
+    width: 100%;  
+    background: #101010;
+}
+
+.footer{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;  
+    padding: 20px;
+}
+
+.copyright{
+    color: #C7C7C7;
+}
+
+.copyright a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.information a{
+    text-decoration: none;
+    color: #C7C7C7;
+}
+
+
+@media screen and (max-width: 1100px){
+    
+    .container-body{
+        flex-wrap: wrap;
+    }
+    
+    .colum1{
+        max-width: 100%;
+    }
+    
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+    }
+}
+
